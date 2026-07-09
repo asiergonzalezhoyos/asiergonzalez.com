@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://asiergonzalez.com/sitemap.xml
