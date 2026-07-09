@@ -377,7 +377,10 @@
         </a>
       </div>
 
-      <form class="form-card" id="leadform" method="POST" action="https://formsubmit.co/asiergonzalezhoyos@gmail.com">
+      <form class="form-card" id="leadform" method="POST" action="https://api.web3forms.com/submit">
+        <input type="hidden" name="access_key" value="3377099f-d15b-43ab-8d49-6d9e0bd23b42">
+        <input type="hidden" name="subject" value="LEAD asiergonzalez.com">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <h3>O déjame tus datos</h3>
         <p class="sub">Te escribo yo en menos de 24 h, en tu horario.</p>
         <div class="field"><label for="n">Nombre</label><input id="n" name="Nombre" type="text" placeholder="Tu nombre" required></div>
@@ -406,15 +409,16 @@
     e.preventDefault();
     var b = f.querySelector('.btn-primary'), d = f.querySelector('.done');
     var data = {
-      _subject: 'LEAD asiergonzalez.com',
-      _template: 'table',
+      access_key: '3377099f-d15b-43ab-8d49-6d9e0bd23b42',
+      subject: 'LEAD asiergonzalez.com',
+      from_name: 'asiergonzalez.com',
       Nombre: f.querySelector('#n').value,
       Contacto: f.querySelector('#w').value,
       Piso: f.querySelector('#d').value || '(no indicado)'
     };
     b.disabled = true; b.textContent = 'Enviando\u2026';
     try {
-      var r = await fetch('https://formsubmit.co/ajax/asiergonzalezhoyos@gmail.com', {
+      var r = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
         body: JSON.stringify(data)
