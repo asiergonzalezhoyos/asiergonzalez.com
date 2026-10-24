@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vender tu piso en Madrid · Tarifa fija 4.500 € · Asier González</title>
-<meta name="description" content="Venta de pisos en Madrid con tarifa fija de 4.500 €, pago solo al firmar en notaría. Trato directo de principio a fin. Si vives fuera de España, la venta se gestiona entera a distancia.">
+<title>Asier González · Venta residencial de lujo · Closer</title>
+<meta name="description" content="Comercial inmobiliario especializado en cerrar ventas de alto valor por cuenta de promotoras e inversores. 29 ventas en 6 meses, 13,6 M€. Español e inglés.">
 <link rel="canonical" href="https://asiergonzalez.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://asiergonzalez.com/">
-<meta property="og:title" content="Vender tu piso en Madrid · Tarifa fija 4.500 € · Asier González">
-<meta property="og:description" content="Venta a tarifa fija de 4.500 €, pago solo al firmar. Trato directo, no un call center.">
+<meta property="og:title" content="Asier González · Venta residencial de lujo · Closer">
+<meta property="og:description" content="Cierro ventas residenciales de alto valor. 29 ventas en 6 meses, 13,6 M€. ES / EN.">
 <meta property="og:image" content="https://asiergonzalez.com/retrato.jpg">
 <meta property="og:locale" content="es_ES">
 <meta name="theme-color" content="#1f3a5f">
@@ -218,17 +218,35 @@
   @media (prefers-reduced-motion: reduce){ .reveal { animation:none; opacity:1; transform:none; } }
   .frame.photo { background: var(--portrait) center 16% / cover no-repeat, var(--surface); }
   .frame.photo .initials, .frame.photo .cap { display: none; }
+
+  .stats { display:grid; grid-template-columns: repeat(4,1fr); gap:2px; background: var(--line); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+  .stat { background: var(--surface); padding: clamp(18px,2.6vw,28px); text-align:center; }
+  .stat .v { font-family: var(--serif); font-size: clamp(1.7rem,3.6vw,2.5rem); color: var(--blue); font-weight:600; line-height:1.1; }
+  .stat .k { margin-top:6px; font-size:.88rem; color: var(--ink-faint); }
+  .exp { border-top:1px solid var(--line); padding: 22px 0; display:grid; grid-template-columns: 13rem 1fr; gap: 1rem 2rem; }
+  .exp .when { color: var(--ink-faint); font-size:.9rem; }
+  .exp h3 { margin-bottom: 6px; }
+  .exp p { color: var(--ink-soft); font-size:.98rem; margin-top:6px; }
+  .lang { font-family:var(--sans); font-size:.85rem; font-weight:700; letter-spacing:.08em; background:none; border:1px solid var(--line-strong); color:var(--ink-soft); border-radius:999px; padding:.35rem .8rem; cursor:pointer; }
+  .lang:hover { border-color: var(--brass); color: var(--brass); }
+  .top-r { display:flex; align-items:center; gap:1rem; }
+  html[lang="es"] [lang="en"], html[lang="en"] [lang="es"]:not(html) { display:none !important; }
+  .final .cta-row { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:28px; }
+  @media (max-width: 760px){ .stats{ grid-template-columns: repeat(2,1fr);} .exp{ grid-template-columns: 1fr; gap:.2rem; } }
 </style>
+
 <style>:root{--portrait:url("/retrato.jpg")} .portrait{width:100%}</style>
 </head>
 <body>
-
 
 <div class="page">
   <header class="top">
     <div class="wrap">
       <div class="brand">Asier González</div>
-      <a class="phone" href="tel:+34613351397">Madrid · <strong>+34 613 351 397</strong></a>
+      <div class="top-r">
+        <a class="phone" href="tel:+34613351397"><strong>+34 613 351 397</strong></a>
+        <button class="lang" id="langbtn" type="button" aria-label="Cambiar idioma / Switch language">EN</button>
+      </div>
     </div>
   </header>
 
@@ -236,209 +254,132 @@
   <section class="hero">
     <div class="wrap grid">
       <div>
-        <span class="eyebrow reveal">Asesor inmobiliario · Madrid</span>
-        <h1 class="reveal r2">Vendo tu piso en Madrid.<br><em>Tarifa fija: 4.500&nbsp;€.</em></h1>
-        <p class="lead reveal r3">Valga lo que valga tu vivienda, mis honorarios son los mismos y se pagan el día de la firma. Valoración seria, fotografía profesional, negociación y notaría: me encargo de todo. Y si vives fuera de España, también: la venta se gestiona entera a distancia.</p>
+        <span class="eyebrow reveal" lang="es">Venta residencial de lujo · Closer</span>
+        <span class="eyebrow reveal" lang="en">Luxury residential sales · Closer</span>
+        <h1 class="reveal r2" lang="es">Cierro ventas residenciales de alto valor.<br><em>Del primer contacto a la notaría.</em></h1>
+        <h1 class="reveal r2" lang="en">I close high-value residential sales.<br><em>From first contact to notary.</em></h1>
+        <p class="lead reveal r3" lang="es">Comercial inmobiliario especializado en vender por cuenta de promotoras e inversores: el propietario pone el producto y los compradores, yo convierto esos compradores en firmas. Mercado prime, clientes nacionales e internacionales, en español y en inglés.</p>
+        <p class="lead reveal r3" lang="en">Real estate sales consultant focused on selling for developers and investors: the owner brings the product and the buyers, I turn those buyers into signed sales. Prime market, Spanish and international clients, in Spanish and English.</p>
         <div class="cta-row reveal r4">
-          <a class="btn btn-primary" href="#contacto">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.3.6-.6.8-.8 1-.1.2-.3.3-.1.6.2.4.9 1.5 2 2.4 1.3 1.1 2.1 1.2 2.4 1.3.2 0 .4 0 .6-.2.2-.2.6-.7.8-1 .2-.2.4-.2.6-.1.2 0 1.4.7 1.6.8.2.1.4.2.4.3.1.1.1.5-.1 1Z"/></svg>
-            Escríbeme por WhatsApp
-          </a>
-          <a class="btn btn-ghost" href="#contacto">Pedir valoración gratis</a>
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/asier-gonzalez" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a>
         </div>
-        <p class="tiny reveal r4">Respuesta el mismo día · Sin compromiso · En tu horario</p>
       </div>
       <div class="portrait reveal r3">
-        <div class="badge">Trato directo, no un call center</div>
-        <div class="frame photo">
-          
-          
-        </div>
+        <div class="badge"><span lang="es">Español · Inglés</span><span lang="en">Spanish · English</span></div>
+        <div class="frame photo"></div>
       </div>
     </div>
   </section>
 
-  <!-- TRUST -->
-  <div class="trust">
+  <!-- CIFRAS -->
+  <section style="padding-top:0">
     <div class="wrap">
-      <p><b>Tarifa fija 4.500&nbsp;€</b> · Pago solo al firmar en notaría · Trato directo conmigo, de principio a fin</p>
+      <div class="stats">
+        <div class="stat"><div class="v">29</div><div class="k" lang="es">ventas en 6 meses</div><div class="k" lang="en">sales in 6 months</div></div>
+        <div class="stat"><div class="v" lang="es">13,6&nbsp;M€</div><div class="v" lang="en">€13.6M</div><div class="k" lang="es">volumen de ventas</div><div class="k" lang="en">sales volume</div></div>
+        <div class="stat"><div class="v" lang="es">~470K€</div><div class="v" lang="en">~€470K</div><div class="k" lang="es">ticket medio</div><div class="k" lang="en">average ticket</div></div>
+        <div class="stat"><div class="v">11</div><div class="k" lang="es">reservas en un mes (récord, sep. 2026)</div><div class="k" lang="en">reservations in one month (record, Sep 2026)</div></div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- STEPS -->
+  <!-- CÓMO TRABAJO -->
   <section>
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Cómo funciona</span>
-        <h2>De la valoración a la notaría</h2>
-        <p class="lead">Cuatro pasos. Tú decides; el trabajo lo hago yo.</p>
+        <span class="eyebrow" lang="es">Cómo trabajo</span><span class="eyebrow" lang="en">How I work</span>
+        <h2 lang="es">Donde se gana o se pierde una venta</h2>
+        <h2 lang="en">Where a sale is won or lost</h2>
       </div>
       <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <h3>Hablamos de tu piso</h3>
-          <p>Me escribes por WhatsApp y te doy una valoración real basada en datos del Catastro y en lo que se vende hoy en tu barrio. Gratis y sin compromiso.</p>
-        </div>
-        <div class="step">
-          <div class="num">2</div>
-          <h3>Preparo la venta</h3>
-          <p>Fotografía profesional, plano, y publicación en Idealista, Fotocasa y el resto de portales. Gestiono todas las visitas. Tú no tocas nada.</p>
-        </div>
-        <div class="step">
-          <div class="num">3</div>
-          <h3>Negocio y cierro</h3>
-          <p>Filtro a los compradores con financiación real, negocio el precio y coordino la firma. Si estás fuera de España, se firma por poder; no necesitas viajar.</p>
-        </div>
-        <div class="step">
-          <div class="num">4</div>
-          <h3>Cobras tu dinero</h3>
-          <p>El importe de la venta llega a tu cuenta. Yo cobro mi tarifa fija solo el día que se firma en notaría. Antes, nada.</p>
-        </div>
+        <div class="step"><div class="num">1</div>
+          <h3 lang="es">Cualificación rápida</h3><h3 lang="en">Fast qualification</h3>
+          <p lang="es">Respuesta el mismo día al comprador que entra. En la primera conversación sé si tiene capacidad, plazo y motivo para comprar.</p>
+          <p lang="en">Same-day response to every inbound buyer. In the first conversation I know whether they have the means, the timing and the reason to buy.</p></div>
+        <div class="step"><div class="num">2</div>
+          <h3 lang="es">Visitas que venden</h3><h3 lang="en">Viewings that sell</h3>
+          <p lang="es">Cada visita preparada para el comprador que viene, no un recorrido genérico. El producto se presenta para que la decisión se tome allí.</p>
+          <p lang="en">Every viewing prepared for the buyer in front of me, not a generic tour. The product is presented so the decision is made on site.</p></div>
+        <div class="step"><div class="num">3</div>
+          <h3 lang="es">Negociación firme</h3><h3 lang="en">Firm negotiation</h3>
+          <p lang="es">Defiendo el precio y las condiciones del propietario y cierro la reserva sin dejar la operación abierta.</p>
+          <p lang="en">I defend the owner&#39;s price and terms and close the reservation without leaving the deal open.</p></div>
+        <div class="step"><div class="num">4</div>
+          <h3 lang="es">Camino limpio a notaría</h3><h3 lang="en">Clean path to notary</h3>
+          <p lang="es">Prevención de blanqueo, arras, financiación y coordinación con notaría, banco y gestoría. La venta reservada llega a firmarse.</p>
+          <p lang="en">AML/KYC checks, deposit contracts, financing and coordination with notary, bank and lawyers. A reserved sale gets signed.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- INCLUDES -->
-  <section style="padding-top:0">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Qué incluye</span>
-        <h2>Una tarifa fija, todo dentro</h2>
-      </div>
-      <div class="includes">
-        <div class="inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Valoración con datos del Catastro.</b> No una estimación a ojo.</span></div>
-        <div class="inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Reportaje fotográfico profesional</b> y plano de la vivienda.</span></div>
-        <div class="inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Publicación en todos los portales</b> (Idealista, Fotocasa y más).</span></div>
-        <div class="inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Gestión completa de visitas</b> y filtrado de compradores.</span></div>
-        <div class="inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Negociación del precio</b> hasta cerrar la mejor oferta.</span></div>
-        <div class="inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Acompañamiento hasta notaría</b> y coordinación con tu gestoría o banco.</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
+  <!-- TRAYECTORIA -->
   <div class="about">
     <section>
-      <div class="wrap grid">
-        <div class="portrait">
-          <div class="frame photo" style="aspect-ratio:1/1">
-            
-          </div>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow" lang="es">Trayectoria</span><span class="eyebrow" lang="en">Experience</span>
         </div>
-        <div>
-          <span class="eyebrow">Quién soy</span>
-          <h2 style="margin-top:14px">La persona que te lo vende, no una plataforma</h2>
-          <p style="margin-top:18px; color:var(--ink-soft)">Soy Asier González. Vivo en Madrid y me dedico a vender vivienda aquí: para propietarios de Madrid y para dueños que viven fuera de España y necesitan a alguien de plena confianza sobre el terreno.</p>
-          <p style="color:var(--ink-soft)">Llevo pocas operaciones a la vez y me meto de lleno en cada una: te respondo yo, te mando vídeo de cada visita y negocio tu venta como si el piso fuera mío. Sin estructura que encarezca el servicio y sin comisiones porcentuales.</p>
-          <p class="sig">Si estás pensando en vender, hablamos.</p>
+        <div class="exp">
+          <div class="when" lang="es">Mar. 2026 – hoy · Madrid</div><div class="when" lang="en">Mar 2026 – present · Madrid</div>
+          <div><h3>AZZAM Vivienda</h3>
+            <p lang="es">Venta y alquiler de la cartera residencial de un gran inversor institucional en Madrid Norte. 29 ventas en seis meses, 13,6 M€ de volumen y ticket medio de ~470.000 €. Récord en septiembre de 2026: 11 reservas y 6 firmas en notaría. Ciclo completo: visitas, cualificación, prevención de blanqueo, negociación, arras y notaría.</p>
+            <p lang="en">Sales and lettings of a large institutional investor&#39;s residential portfolio in Madrid North. 29 sales in six months, €13.6M volume, ~€470K average ticket. Record month September 2026: 11 reservations and 6 completions. Full cycle: viewings, qualification, AML checks, negotiation, deposit contracts and notary.</p></div>
+        </div>
+        <div class="exp">
+          <div class="when" lang="es">Dic. 2025 – feb. 2026 · Madrid</div><div class="when" lang="en">Dec 2025 – Feb 2026 · Madrid</div>
+          <div><h3>Engel &amp; Völkers</h3>
+            <p lang="es">Venta residencial en el mercado prime de Madrid. Una venta de ~500.000 € cerrada en las diez primeras semanas.</p>
+            <p lang="en">Residential sales in Madrid&#39;s prime market. Closed a ~€500K sale within the first ten weeks.</p></div>
+        </div>
+        <div class="exp">
+          <div class="when" lang="es">Feb. – ago. 2024 · Madrid</div><div class="when" lang="en">Feb – Aug 2024 · Madrid</div>
+          <div><h3 lang="es">Consultora inmobiliaria prime</h3><h3 lang="en">Prime real estate boutique</h3>
+            <p lang="es">Asesor de vivienda de lujo para compradores y vendedores de alto patrimonio: La Moraleja, El Soto, La Finca, Pozuelo, Boadilla, Golf de Las Rozas, Salamanca, Chamberí y Chamartín.</p>
+            <p lang="en">Luxury residential advisor for high-net-worth buyers and sellers: La Moraleja, El Soto, La Finca, Pozuelo, Boadilla, Golf de Las Rozas, Salamanca, Chamberí and Chamartín.</p></div>
+        </div>
+        <div class="exp">
+          <div class="when">2013 – 2023</div>
+          <div><h3>AMPERBIKE</h3>
+            <p lang="es">Fundador y director durante diez años de una empresa de venta y distribución de bicicletas eléctricas: ventas, marketing, operaciones y cuenta de resultados, con red internacional de proveedores y distribuidores y negociación en inglés.</p>
+            <p lang="en">Founder and director for ten years of an e-bike sales and distribution company: sales, marketing, operations and P&amp;L, with an international supplier and dealer network and contracts negotiated in English.</p></div>
         </div>
       </div>
     </section>
   </div>
 
-  <!-- REMOTO -->
-  <section>
-    <div class="wrap">
-      <div class="section-head" style="text-align:center; margin-left:auto; margin-right:auto; max-width:34rem">
-        <span class="eyebrow" style="justify-content:center; display:flex">Si vives fuera de España</span>
-        <h2 style="margin-top:14px">La venta completa, sin que vengas</h2>
-        <p class="lead">Buena parte de mis clientes vive fuera. El proceso está pensado para eso: seguimiento por WhatsApp con vídeo de cada visita, firma por poder y coordinación con tu gestoría. Y si tributas como no residente, usa gratis mi <a href="/modelo-210/" style="color:var(--brass)">calculadora del Modelo 210</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICE -->
-  <section>
-    <div class="col">
-      <div class="section-head" style="text-align:center; margin-left:auto; margin-right:auto">
-        <span class="eyebrow" style="justify-content:center; display:flex">El precio</span>
-        <h2 style="margin-top:14px">Sin comisión. Sin sorpresas.</h2>
-      </div>
-      <div class="price-card">
-        <span class="eyebrow" style="justify-content:center; display:flex">Tarifa fija · todo incluido</span>
-        <div class="fee">4.500&nbsp;€</div>
-        <p style="color:var(--ink-soft); max-width:34ch; margin:0 auto">El mismo precio valga tu piso 200.000&nbsp;€ o 600.000&nbsp;€. En una vivienda de 400.000&nbsp;€, una agencia tradicional cobra entre 12.000 y 20.000&nbsp;€ de comisión.</p>
-        <div class="terms">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Pagas solo si se vende</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> El día de la firma en notaría</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Cero por adelantado</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA + FORM -->
+  <!-- CONTACTO -->
   <section id="contacto" class="final">
     <div class="wrap">
-      <span class="eyebrow" style="justify-content:center; display:flex">Hablemos</span>
-      <h2 style="margin-top:14px">¿Vendemos tu piso?</h2>
-      <p class="lead">Cuéntame dónde está y en dos frases te digo qué haría con él. Sin compromiso.</p>
+      <span class="eyebrow" style="justify-content:center; display:flex" lang="es">Contacto</span>
+      <span class="eyebrow" style="justify-content:center; display:flex" lang="en">Contact</span>
+      <h2 style="margin-top:14px" lang="es">Hablemos</h2>
+      <h2 style="margin-top:14px" lang="en">Let&#39;s talk</h2>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://wa.me/34613351397?text=Hola%20Asier%2C%20quiero%20vender%20mi%20piso%20en%20Madrid." target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.3.6-.6.8-.8 1-.1.2-.3.3-.1.6.2.4.9 1.5 2 2.4 1.3 1.1 2.1 1.2 2.4 1.3.2 0 .4 0 .6-.2.2-.2.6-.7.8-1 .2-.2.4-.2.6-.1.2 0 1.4.7 1.6.8.2.1.4.2.4.3.1.1.1.5-.1 1Z"/></svg>
-          Escríbeme por WhatsApp
-        </a>
+        <a class="btn btn-primary" href="mailto:asiergonzalezhoyos@gmail.com">asiergonzalezhoyos@gmail.com</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/asier-gonzalez" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="tel:+34613351397">+34 613 351 397</a>
       </div>
-
-      <form class="form-card" id="leadform" method="POST" action="https://api.web3forms.com/submit">
-        <input type="hidden" name="access_key" value="3377099f-d15b-43ab-8d49-6d9e0bd23b42">
-        <input type="hidden" name="subject" value="LEAD asiergonzalez.com">
-        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-        <h3>O déjame tus datos</h3>
-        <p class="sub">Te escribo yo en menos de 24 h, en tu horario.</p>
-        <div class="field"><label for="n">Nombre</label><input id="n" name="Nombre" type="text" placeholder="Tu nombre" required></div>
-        <div class="field"><label for="w">WhatsApp o email</label><input id="w" name="Contacto" type="text" placeholder="Por donde prefieras que te escriba" required></div>
-        <div class="field"><label for="d">¿Dónde está el piso?</label><input id="d" name="Piso" type="text" placeholder="Calle y barrio de Madrid, o referencia catastral"></div>
-        <button class="btn btn-primary" type="submit">Quiero que me llames</button>
-        <p class="legal">Solo usaré tus datos para contactarte sobre la venta de tu piso.</p>
-        <p class="done legal" style="display:none; color:var(--brass); font-weight:600">Recibido. Te escribo en menos de 24 h.</p>
-      </form>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
-      <div><strong style="font-family:var(--serif); color:var(--ink)">Asier González</strong> · Asesor inmobiliario en Madrid</div>
-      <div><a href="tel:+34613351397">+34 613 351 397</a> · <a href="https://wa.me/34613351397">WhatsApp</a> · asiergonzalez.com</div>
+      <div><strong style="font-family:var(--serif); color:var(--ink)">Asier González</strong> · <span lang="es">Venta residencial de lujo</span><span lang="en">Luxury residential sales</span></div>
+      <div><a href="https://www.linkedin.com/in/asier-gonzalez">LinkedIn</a> · <a href="mailto:asiergonzalezhoyos@gmail.com">Email</a> · asiergonzalez.com</div>
     </div>
   </footer>
 </div>
 
 <script>
 (function(){
-  var f = document.getElementById('leadform');
-  if (!f) return;
-  f.addEventListener('submit', async function(e){
-    e.preventDefault();
-    var b = f.querySelector('.btn-primary'), d = f.querySelector('.done');
-    var data = {
-      access_key: '3377099f-d15b-43ab-8d49-6d9e0bd23b42',
-      subject: 'LEAD asiergonzalez.com',
-      from_name: 'asiergonzalez.com',
-      Nombre: f.querySelector('#n').value,
-      Contacto: f.querySelector('#w').value,
-      Piso: f.querySelector('#d').value || '(no indicado)'
-    };
-    b.disabled = true; b.textContent = 'Enviando\u2026';
-    try {
-      var r = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-        body: JSON.stringify(data)
-      });
-      if (!r.ok) throw new Error(r.status);
-      d.style.display = 'block'; b.textContent = 'Enviado \u2713';
-    } catch (err) {
-      b.disabled = false; b.textContent = 'Quiero que me llames';
-      var t = encodeURIComponent('Hola Asier, soy ' + data.Nombre + '. Piso: ' + data.Piso +
-                                 '. Escr\u00edbeme a: ' + data.Contacto);
-      window.open('https://wa.me/34613351397?text=' + t, '_blank', 'noopener');
-      d.textContent = 'El formulario no ha podido enviarse; te he abierto WhatsApp con tus datos ya escritos.';
-      d.style.display = 'block';
-    }
-  });
+  var h = document.documentElement, b = document.getElementById('langbtn');
+  function set(l){ h.lang = l; b.textContent = l === 'es' ? 'EN' : 'ES'; try{ localStorage.setItem('lang', l); }catch(e){} }
+  var saved = null; try{ saved = localStorage.getItem('lang'); }catch(e){}
+  var q = new URLSearchParams(location.search).get('lang');
+  set(q === 'en' || q === 'es' ? q : (saved || ((navigator.language || 'es').toLowerCase().indexOf('es') === 0 ? 'es' : 'en')));
+  b.addEventListener('click', function(){ set(h.lang === 'es' ? 'en' : 'es'); });
 })();
 </script>
-
 </body>
 </html>
