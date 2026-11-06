@@ -383,8 +383,7 @@
     e.preventDefault();
     if(!f.nombre.value.trim() || !f.whatsapp.value.trim()){ msg.textContent='Pon tu nombre y tu WhatsApp, por favor.'; return; }
     var b=f.querySelector('button'); b.disabled=true; b.textContent='Enviando…';
-    var data={}; new FormData(f).forEach(function(v,k){ data[k]=v; });
-    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)})
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(f)})
       .then(function(r){ return r.json(); })
       .then(function(j){
         if(j.success){ f.innerHTML='<h3>Recibido</h3><p class="sub" style="margin:8px 0 0">Te escribo por WhatsApp hoy mismo con los datos de tu zona.</p>'; }
