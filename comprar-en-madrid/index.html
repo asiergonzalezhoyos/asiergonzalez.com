@@ -235,6 +235,7 @@
   .faq details[open] summary::after { content:"\2013"; }
   .faq details p { margin-top: 10px; color: var(--ink-soft); font-size:.98rem; max-width: 62ch; }
   .zones { margin-top: 18px; color: var(--ink-soft); }
+  .field select { font-family:var(--sans); font-size:1rem; padding:.8rem .9rem; border-radius:9px; border:1.5px solid var(--line-strong); background: var(--ground); color: var(--ink); }
 </style>
 <style>:root{--portrait:url("/retrato.jpg")} .portrait{width:100%}</style>
 </head>
@@ -254,8 +255,8 @@
         <h1 class="reveal r2">Compra en Madrid con alguien <em>de tu lado.</em></h1>
         <p class="lead reveal r3">Para familias e inversores de México, Colombia, Venezuela y Perú que quieren comprar vivienda en Madrid sin hacerlo a ciegas.</p>
         <div class="cta-row reveal r4">
-          <a class="btn btn-primary" href="https://wa.me/34613351397?text=Hola%20Asier%2C%20quiero%20comprar%20vivienda%20en%20Madrid"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Escríbeme por WhatsApp</a>
-          <a class="btn btn-ghost" href="#como">Cómo trabajo</a>
+          <a class="btn btn-primary" href="#informe">Ver lo que se paga de verdad</a>
+          <a class="btn btn-ghost" href="https://wa.me/34613351397?text=Hola%20Asier%2C%20quiero%20comprar%20vivienda%20en%20Madrid"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Escríbeme por WhatsApp</a>
         </div>
         <p class="tiny reveal r4">Primera llamada sin compromiso. Respondo el mismo día.</p>
       </div>
@@ -264,6 +265,40 @@
   </section>
 
   <div class="trust"><div class="wrap"><p>En España la agencia trabaja para quien vende. Yo trabajo para quien compra.</p></div></div>
+
+  <section id="informe" style="padding-bottom:0">
+    <div class="col">
+      <div class="section-head" style="max-width:none">
+        <span class="eyebrow">Gratis</span>
+        <h2>¿Cuánto se paga de verdad en el barrio que te interesa?</h2>
+        <p class="lead">Los anuncios piden una cosa y ante notario se firma otra. Dime qué zona te interesa y te mando los datos reales de esa zona, sin compromiso.</p>
+      </div>
+      <div class="stats" style="grid-template-columns:repeat(3,1fr)">
+        <div class="stat"><div class="k">Salamanca</div><div class="v">9.100 €</div><div class="k">el m² ante notario<br>(los anuncios piden 11.600)</div></div>
+        <div class="stat"><div class="k">Chamberí</div><div class="v">7.600 €</div><div class="k">el m² ante notario<br>(los anuncios piden 9.800)</div></div>
+        <div class="stat"><div class="k">Chamartín</div><div class="v">7.300 €</div><div class="k">el m² ante notario<br>(los anuncios piden 8.500)</div></div>
+      </div>
+      <p class="tiny" style="margin-top:10px;color:var(--ink-faint);font-size:.82rem">Precio medio por m². Datos notariales publicados en junio de 2026 y precios de anuncios de octubre de 2026.</p>
+      <form class="form-card" id="leadform" novalidate>
+        <h3>Te mando los datos de tu zona</h3>
+        <p class="sub">Te respondo por WhatsApp el mismo día.</p>
+        <input type="hidden" name="access_key" value="3377099f-d15b-43ab-8d49-6d9e0bd23b42">
+        <input type="hidden" name="subject" value="Comprador LatAm: informe de zona">
+        <input type="hidden" name="from_name" value="asiergonzalez.com/comprar-en-madrid">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" required autocomplete="name"></div>
+        <div class="field"><label for="f-wa">WhatsApp, con prefijo del país</label><input id="f-wa" name="whatsapp" required inputmode="tel" placeholder="+52 55 1234 5678" autocomplete="tel"></div>
+        <div class="field"><label for="f-pais">Desde dónde compras</label><select id="f-pais" name="pais"><option>México</option><option>Colombia</option><option>Perú</option><option>Venezuela</option><option>Argentina</option><option>Chile</option><option>Ecuador</option><option>Estados Unidos</option><option>Otro</option></select></div>
+        <div class="field"><label for="f-zona">Zona o barrio que te interesa</label><input id="f-zona" name="zona" placeholder="Salamanca, Chamberí… o todavía no lo sé"></div>
+        <div class="field"><label for="f-pres">Presupuesto aproximado</label><select id="f-pres" name="presupuesto"><option>Menos de 300.000 €</option><option>300.000 – 600.000 €</option><option>600.000 € – 1 M€</option><option>Más de 1 M€</option></select></div>
+        <div class="field"><label for="f-uso">Para</label><select id="f-uso" name="uso"><option>Vivir</option><option>Invertir</option><option>Las dos cosas</option></select></div>
+        <button class="btn btn-primary" type="submit">Quiero los datos de mi zona</button>
+        <p class="legal">Uso tus datos solo para responderte. Responsable: Asier González (asiergonzalezhoyos@gmail.com). Puedes pedir que los borre cuando quieras.</p>
+        <p class="legal" id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
 
   <section id="como">
     <div class="wrap">
@@ -341,5 +376,23 @@
   </footer>
 </div>
 
+<script>
+(function(){
+  var f=document.getElementById('leadform'), msg=document.getElementById('form-msg');
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!f.nombre.value.trim() || !f.whatsapp.value.trim()){ msg.textContent='Pon tu nombre y tu WhatsApp, por favor.'; return; }
+    var b=f.querySelector('button'); b.disabled=true; b.textContent='Enviando…';
+    var data={}; new FormData(f).forEach(function(v,k){ data[k]=v; });
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)})
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if(j.success){ f.innerHTML='<h3>Recibido</h3><p class="sub" style="margin:8px 0 0">Te escribo por WhatsApp hoy mismo con los datos de tu zona.</p>'; }
+        else { throw new Error('x'); }
+      })
+      .catch(function(){ b.disabled=false; b.textContent='Quiero los datos de mi zona'; msg.innerHTML='No se ha podido enviar. Escríbeme directamente por <a href="https://wa.me/34613351397?text=Hola%20Asier%2C%20quiero%20los%20datos%20de%20mi%20zona">WhatsApp</a>.'; });
+  });
+})();
+</script>
 </body>
 </html>
