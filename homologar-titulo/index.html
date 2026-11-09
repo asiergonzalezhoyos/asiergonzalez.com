@@ -360,14 +360,31 @@
 <script>
 (function(){
   var f=document.getElementById('leadform'), msg=document.getElementById('form-msg');
+  var LON={'34':[9],'1':[10],'52':[10,11],'53':[8],'54':[10,11],'56':[9],'57':[10],'58':[10],'51':[9],'502':[8],'503':[8],'504':[8],'505':[8],'506':[8],'507':[8],'591':[8],'593':[9],'595':[9],'598':[8]};
+  function tel(v){
+    var s=v.replace(/[\s().\-]/g,'');
+    if(s.indexOf('00')===0){ s='+'+s.slice(2); }
+    if(s.charAt(0)!=='+'){ return /^[67]\d{8}$/.test(s) ? '+34'+s : null; }
+    var d=s.slice(1); if(!/^\d+$/.test(d)){ return null; }
+    for(var n=3;n>=1;n--){ var p=d.slice(0,n); if(LON[p]){ return LON[p].indexOf(d.length-n)>=0 ? '+'+d : null; } }
+    return (d.length>=8 && d.length<=15) ? '+'+d : null;
+  }
   f.addEventListener('submit', function(e){
     e.preventDefault();
     if(!f.nombre.value.trim() || !f.whatsapp.value.trim()){ msg.textContent='Pon tu nombre y tu WhatsApp, por favor.'; return; }
+    var t=tel(f.whatsapp.value);
+    if(!t){ msg.textContent='Ese WhatsApp no parece completo. Escríbelo con el prefijo de tu país, por ejemplo '+f.whatsapp.placeholder+'.'; f.whatsapp.focus(); return; }
+    f.whatsapp.value=t; msg.textContent='';
+    var nom=f.nombre.value.trim().split(/\s+/)[0];
     var b=f.querySelector('button'); b.disabled=true; b.textContent='Enviando…';
     fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(f)})
       .then(function(r){ return r.json(); })
       .then(function(j){
-        if(j.success){ f.innerHTML='<h3>Recibido</h3><p class="sub" style="margin:8px 0 0">Te escribo por WhatsApp en menos de 24 horas con tu caso.</p>'; }
+        if(j.success){
+          var url='https://wa.me/34613351397?text='+encodeURIComponent('Hola Asier, soy '+nom+'. Acabo de enviar el formulario para homologar mi título.');
+          f.innerHTML='<h3>Recibido. Último paso</h3><p class="sub" style="margin:8px 0 0">Mándame este WhatsApp para dejar el chat abierto. Te escribo por WhatsApp en menos de 24 horas con tu caso.</p><p style="margin:16px 0 0"><a class="btn btn-primary" href="'+url+'">Abrir WhatsApp</a></p>';
+          setTimeout(function(){ location.href=url; },1500);
+        }
         else { throw new Error('x'); }
       })
       .catch(function(){ b.disabled=false; b.textContent='Quiero la revisión gratis'; msg.innerHTML='No se ha podido enviar. Escríbeme directamente por <a href="https://wa.me/34613351397?text=Hola%20Asier%2C%20quiero%20homologar%20mi%20t%C3%ADtulo%20en%20Espa%C3%B1a">WhatsApp</a>.'; });
