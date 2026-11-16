@@ -245,7 +245,7 @@
   <header class="top">
     <div class="wrap">
       <a class="brand" href="/" style="color:inherit;text-decoration:none">Asier González</a>
-      <div class="top-r"><a class="phone" href="https://wa.me/34613351397?text=Hola%20Asier%2C%20quiero%20homologar%20mi%20t%C3%ADtulo%20en%20Espa%C3%B1a"><strong>+34 613 351 397</strong></a></div>
+      <div class="top-r"></div>
     </div>
   </header>
 
@@ -257,7 +257,6 @@
         <p class="lead reveal r3">Preparamos y presentamos tu solicitud de homologación o de equivalencia en la sede electrónica del Ministerio, en tu nombre y con tu autorización. Universidad, bachillerato y formación profesional.</p>
         <div class="cta-row reveal r4">
           <a class="btn btn-primary" href="#caso">Revisar mi caso gratis</a>
-          <a class="btn btn-ghost" href="https://wa.me/34613351397?text=Hola%20Asier%2C%20quiero%20homologar%20mi%20t%C3%ADtulo%20en%20Espa%C3%B1a"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Escríbeme por WhatsApp</a>
         </div>
         <p class="tiny reveal r4">En 24 horas te digo qué trámite te toca, qué documentos te faltan y cuánto cuesta en total.</p>
       </div>
@@ -343,7 +342,7 @@
       <h2 style="margin-top:14px">Cuéntame qué estudiaste</h2>
       <p class="lead">Carrera, país y para qué lo necesitas. Con eso te digo qué trámite te toca y cuánto cuesta en total.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://wa.me/34613351397?text=Hola%20Asier%2C%20quiero%20homologar%20mi%20t%C3%ADtulo%20en%20Espa%C3%B1a"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>WhatsApp</a>
+        <a class="btn btn-primary" href="#leadform">Déjame tu WhatsApp y te escribo</a>
         <a class="btn btn-ghost" href="mailto:asiergonzalezhoyos@gmail.com">asiergonzalezhoyos@gmail.com</a>
       </div>
     </div>
@@ -381,13 +380,13 @@
       .then(function(r){ return r.json(); })
       .then(function(j){
         if(j.success){
-          var url='https://wa.me/34613351397?text='+encodeURIComponent('Hola Asier, soy '+nom+'. Acabo de enviar el formulario para homologar mi título.');
+          var url='https://wa.me/'+['34','613','351','397'].join('')+'?text='+encodeURIComponent('Hola Asier, soy '+nom+'. Acabo de enviar el formulario para homologar mi título.');
           f.innerHTML='<h3>Recibido. Último paso</h3><p class="sub" style="margin:8px 0 0">Mándame este WhatsApp para dejar el chat abierto. Te escribo por WhatsApp en menos de 24 horas con tu caso.</p><p style="margin:16px 0 0"><a class="btn btn-primary" href="'+url+'">Abrir WhatsApp</a></p>';
           setTimeout(function(){ location.href=url; },1500);
         }
         else { throw new Error('x'); }
       })
-      .catch(function(){ b.disabled=false; b.textContent='Quiero la revisión gratis'; msg.innerHTML='No se ha podido enviar. Escríbeme directamente por <a href="https://wa.me/34613351397?text=Hola%20Asier%2C%20quiero%20homologar%20mi%20t%C3%ADtulo%20en%20Espa%C3%B1a">WhatsApp</a>.'; });
+      .catch(function(){ b.disabled=false; b.textContent='Quiero la revisión gratis'; msg.innerHTML='No se ha podido enviar. Escríbeme a <a href="mailto:asiergonzalezhoyos@gmail.com">asiergonzalezhoyos@gmail.com</a>.'; });
   });
 })();
 </script>
